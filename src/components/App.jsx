@@ -2,8 +2,8 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import Login from 'pages/Login';
 import Register from 'pages/Register';
 import {useSelector } from 'react-redux';
-import {getUser } from './redux/selectos';
-import Contacts from 'pages/Contacts';
+import {getUser } from '../redux/selectos';
+import Contacts from 'pages/ContactsList';
 import {ChakraProvider } from '@chakra-ui/react';
 
 

@@ -6,7 +6,7 @@ import {
   Input,
   Text,
 } from '@chakra-ui/react';
-import { loginUser } from 'components/redux/operations';
+import { loginUser } from 'redux/operations';
 import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 

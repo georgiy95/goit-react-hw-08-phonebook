@@ -3,16 +3,16 @@ import {
   fetchContacts,
   logoutUser,
   setToken,
-} from 'components/redux/operations';
-import { getContacts, getFilter, getUser } from 'components/redux/selectos';
+} from 'redux/operations';
+import { getContacts, getFilter, getUser } from 'redux/selectos';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { Box, Button, List, ListItem, Text } from '@chakra-ui/react';
-import { Filter } from 'components/Filter/Filter';
-import { PhoneBook } from 'components/PhoneBook/PhoneBook';
-import { openModal } from 'components/redux/filterSlice';
+import { Filter } from 'components/Input/Input';
+import { ContactForm } from 'components/ContactForm/ContactForm';
+import { openModal } from 'redux/filterSlice';
 
-const Contacts = ({ children }) => {
+const ContactsList = ({ children }) => {
   const { user } = useSelector(getUser);
   const dispatch = useDispatch();
   const filter = useSelector(getFilter);
@@ -75,7 +75,7 @@ const Contacts = ({ children }) => {
       </Box>
 
       <Box  p="16px">
-        <PhoneBook />
+        <ContactForm />
 
         <Box display="flex" flexDirection="column"  w="100%">
           <Filter />
@@ -117,4 +117,4 @@ const Contacts = ({ children }) => {
   );
 };
 
-export default Contacts;
+export default ContactsList;

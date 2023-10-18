@@ -1,6 +1,6 @@
 import { Box, FormLabel, Input } from '@chakra-ui/react';
-import { filteringContacts } from 'components/redux/filterSlice';
-import { getFilter } from 'components/redux/selectos';
+import { filteringContacts } from 'redux/filterSlice';
+import { getFilter } from 'redux/selectos';
 import { useDispatch, useSelector } from 'react-redux';
 
 export const Filter = () => {

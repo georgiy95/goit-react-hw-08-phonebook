@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { createContact, fetchContacts } from 'components/redux/operations';
-import { getContacts } from 'components/redux/selectos';
+import { createContact, fetchContacts } from 'redux/operations';
+import { getContacts } from 'redux/selectos';
 import { Box, Button, FormControl, FormLabel, Input } from '@chakra-ui/react';
 
-export const PhoneBook = () => {
+export const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(getContacts);
 
