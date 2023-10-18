@@ -31,11 +31,12 @@ export const PhoneBook = () => {
     <Box w="400px">
       <form action="submit" onSubmit={handleSubmit} >
         <FormControl>
-          <FormLabel fontSize={'20'}>
+          <FormLabel fontSize={'20'} color={'#00f'}>
             Name:
             <Input
               fontSize={'20'}
               fontWeight={'500'}
+              borderColor="#ff6b0a"
               type="text"
               name="name"
               pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -44,10 +45,11 @@ export const PhoneBook = () => {
             />
           </FormLabel>
 
-          <FormLabel fontSize={'20'}>
+          <FormLabel fontSize={'20'} color={'#00f'}>
             Number:
             <Input
               fontSize={'20'}
+              borderColor="#ff6b0a"
               fontWeight={'500'}
               type="tel"
               name="number"

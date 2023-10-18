@@ -13,11 +13,12 @@ export const Filter = () => {
 
   return (
     <Box>
-      <FormLabel fontSize={'20'} w="400px">
+      <FormLabel fontSize={'20'} w="400px" color={'#00f'}>
         Find contacts by name:
         <Input
           fontSize={'20'}
           fontWeight={'500'}
+          borderColor="#ff6b0a"
           type="text"
           value={filter}
           onChange={handlFilteringContacts}

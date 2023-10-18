@@ -53,12 +53,11 @@ const Contacts = ({ children }) => {
       <Box
         p="2"
         bgColor="#00f"
-        border="1px"
         display="flex"
         justifyContent="space-between"
         alignItems="center"
       >
-        <Text fontSize="28" color="#fff">
+        <Text fontSize="28" color="#fff" paddingLeft="9px">
           {user.user.name}
         </Text>
 

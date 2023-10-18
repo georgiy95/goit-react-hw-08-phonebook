@@ -36,7 +36,7 @@ const Register = () => {
   return (
     <>
       <Box p="2" bgColor={'#00f'}>
-      <Text fontSize="28"  color="#fff">
+      <Text fontSize="28"  color="#fff" paddingLeft="9px">
           PhoneBook
         </Text>
       </Box>
@@ -51,6 +51,7 @@ const Register = () => {
                 fontSize={'20'}
                 fontWeight={'500'}
                 name="name"
+                borderColor="#ff6b0a"
                 type="text"
               />
             </FormLabel>
@@ -61,6 +62,7 @@ const Register = () => {
                 fontSize={'20'}
                 fontWeight={'500'}
                 name="email"
+                borderColor="#ff6b0a"
                 type="email"
               />
             </FormLabel>
@@ -71,6 +73,7 @@ const Register = () => {
                 fontSize={'20'}
                 fontWeight={'500'}
                 name="password"
+                borderColor="#ff6b0a"
                 type="password"
               />
             </FormLabel>

@@ -32,8 +32,8 @@ const Login = () => {
 
   return (
     <>
-      <Box p="2" border="1px" bgColor={'#00f'}>
-        <Text fontSize="28"  color="#fff">
+      <Box p="2"  bgColor={'#00f'} border-bottom={'5px solid #000000'}>
+        <Text fontSize="28"  color="#fff" paddingLeft="9px">
           PhoneBook
         </Text>
       </Box>
