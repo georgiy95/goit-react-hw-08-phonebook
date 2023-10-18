@@ -13,7 +13,7 @@ export const Filter = () => {
 
   return (
     <Box>
-      <FormLabel fontSize={'20'} w="500px">
+      <FormLabel fontSize={'20'} w="400px">
         Find contacts by name:
         <Input
           fontSize={'20'}

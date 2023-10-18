@@ -49,10 +49,11 @@ img {
   max-width: 100%;
   height: auto;
 }
-/* Скиданні обведення у input */
+
 input,
 textarea {
   outline: none;
+  border-color: #ff6b0a;
 }
 
 .app {

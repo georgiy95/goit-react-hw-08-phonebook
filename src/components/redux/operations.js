@@ -62,17 +62,6 @@ export const changeContact = createAsyncThunk(
   }
 );
 
-// export const fetchUser = createAsyncThunk(
-//   'user/fetchCurrent',
-//   async (_, thunkAPI) => {
-//     try {
-//       const { data } = await axios.get('/users/current');
-//       return data;
-//     } catch (evt) {
-//       return thunkAPI.rejectWithValue(evt.message);
-//     }
-//   }
-// );
 
 export const createUser = createAsyncThunk(
   'user/createUser',

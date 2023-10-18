@@ -23,19 +23,6 @@ const userSlice = createSlice({
   initialState: initialContacts,
 
   extraReducers: builder => {
-    // fetch
-
-    // builder.addCase(fetchUser.pending, pendingFunc);
-    // builder.addCase(fetchUser.fulfilled, (state, action) => {
-    //   return {
-    //     user: { token: state.user.token, user: action.payload },
-    //     isLoading: false,
-    //     error: null,
-    //   };
-    // });
-    // builder.addCase(fetchUser.rejected, rejectFunc);
-
-    // create
 
     builder.addCase(createUser.pending, pendingFunc);
     builder.addCase(createUser.fulfilled, (_, action) => {
@@ -47,7 +34,6 @@ const userSlice = createSlice({
     });
     builder.addCase(createUser.rejected, rejectFunc);
 
-    // logout
 
     builder.addCase(logoutUser.pending, pendingFunc);
     builder.addCase(logoutUser.fulfilled, () => {
@@ -59,7 +45,6 @@ const userSlice = createSlice({
     });
     builder.addCase(logoutUser.rejected, rejectFunc);
 
-    // login
 
     builder.addCase(loginUser.pending, pendingFunc);
     builder.addCase(loginUser.fulfilled, (_, action) => {

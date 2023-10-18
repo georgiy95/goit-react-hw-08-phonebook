@@ -52,72 +52,57 @@ const Contacts = ({ children }) => {
     <>
       <Box
         p="2"
-        bgColor="#d6d5d4"
+        bgColor="#00f"
         border="1px"
         display="flex"
         justifyContent="space-between"
         alignItems="center"
       >
-        <Text fontSize="28" fontWeight="700" color="#1498fd">
+        <Text fontSize="28" color="#fff">
           {user.user.name}
         </Text>
 
         <Button
           onClick={logout}
           bgColor="transparent"
-          border="1px"
-          borderColor="#000000"
-          fontWeight="700"
-          color="#1498fd"
-          _hover={{ bgColor: '#ffffff' }}
+          border="2px"
+          borderColor="#fff"
+          color="#fff"
+          _hover={{ bgColor: '#FF6B0A',  color:"#fff", borderColor:"#ff6b0a"}} 
           fontSize={'20'}
         >
           Loguot
         </Button>
       </Box>
 
-      <Box display="flex" p="16px">
+      <Box  p="16px">
         <PhoneBook />
 
-        <Box display="flex" flexDirection="column" alignItems="center" w="100%">
+        <Box display="flex" flexDirection="column"  w="100%">
           <Filter />
-          <List display="flex" flexDirection={'column'} w={'500px'} gap={'4'}>
+          <List display="flex" flexDirection={'column'} w={'500px'} gap={'4'} >
             {visibleContacts.map(({ name, number, id }) => {
               return (
                 <ListItem
                   key={id}
                   id={id}
                   onClick={handlDeleteContact}
-                  fontSize={'24'}
+                  fontSize={'22'}
                   fontWeight={'600'}
                   display={'flex'}
                   alignItems={'center'}
-                  justifyContent={'space-between'}
+                  gap={'15px'}
                 >
                   {name}: {number}
-                  <Box display={'flex'} gap={'4'}>
-                    <Button
-                      name="change"
-                      bgColor="transparent"
-                      border="1px"
-                      borderColor="#000000"
-                      fontWeight="700"
-                      color="#1498fd"
-                      _hover={{ bgColor: '#d6d5d4', color: '#1498fd' }}
-                      fontSize={'20'}
-                      type="button"
-                    >
-                      Change
-                    </Button>
+                  <Box display={'flex'} gap={'4'} >
                     <Button
                       name="delete"
                       bgColor="transparent"
                       border="1px"
-                      borderColor="#000000"
-                      fontWeight="700"
-                      color="red"
-                      _hover={{ bgColor: 'red', color: '#1498fd' }}
-                      fontSize={'20'}
+                      borderRadius="10px"
+                      borderColor="red"
+                      color="#FF0000"
+                      _hover={{ bgColor: 'red', color: '#fff', borderColor: 'red'}}
                       type="button"
                     >
                       Delete

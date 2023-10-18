@@ -35,8 +35,8 @@ const Register = () => {
 
   return (
     <>
-      <Box p="2" border="1px" bgColor={'#d6d5d4'}>
-        <Text fontSize="28" fontWeight="700" color="#1498fd">
+      <Box p="2" bgColor={'#00f'}>
+      <Text fontSize="28"  color="#fff">
           PhoneBook
         </Text>
       </Box>
@@ -44,7 +44,7 @@ const Register = () => {
       <Box p={'16px'}>
         <form action="submit" onSubmit={handleRegister}>
           <FormControl w={'400px'}>
-            <FormLabel fontSize={'20'} fontWeight={'500'}>
+            <FormLabel fontSize={'20'} fontWeight={'500'} color={'#00f'}>
               Name:
               <Input
                 id="1"
@@ -54,7 +54,7 @@ const Register = () => {
                 type="text"
               />
             </FormLabel>
-            <FormLabel fontSize={'20'} fontWeight={'500'}>
+            <FormLabel fontSize={'20'} fontWeight={'500'} color={'#00f'}>
               Email:{' '}
               <Input
                 id="2"
@@ -64,7 +64,7 @@ const Register = () => {
                 type="email"
               />
             </FormLabel>
-            <FormLabel fontSize={'20'} fontWeight={'500'}>
+            <FormLabel fontSize={'20'} fontWeight={'500'} color={'#00f'}>
               Password:
               <Input
                 id="3"
@@ -78,11 +78,13 @@ const Register = () => {
               <Button
                 bgColor="transparent"
                 border="1px"
-                borderColor="#000000"
                 fontWeight="700"
-                color="#1498fd"
+                borderColor="#ff6b0a"
+                borderRadius="10px"
+                color="#ff6b0a"
                 fontSize={'20'}
-                _hover={{ bgColor: '#d6d5d4' }}
+                marginTop="20px"
+                _hover={{ bgColor: '#FF6B0A',  color:"#fff"}} 
               >
                 <NavLink to="/login">Sign in</NavLink>
               </Button>
@@ -90,11 +92,13 @@ const Register = () => {
                 type="submit"
                 bgColor="transparent"
                 border="1px"
-                borderColor="#000000"
                 fontWeight="700"
-                color="#1498fd"
+                borderColor="#ff6b0a"
+                borderRadius="10px"
+                color="#ff6b0a"
                 fontSize={'20'}
-                _hover={{ bgColor: '#d6d5d4' }}
+                marginTop="20px"
+                _hover={{ bgColor: '#FF6B0A',  color:"#fff"}} 
                 textDecoration={'underline'}
               >
                 Sign up

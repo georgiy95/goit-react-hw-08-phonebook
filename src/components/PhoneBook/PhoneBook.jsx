@@ -29,7 +29,7 @@ export const PhoneBook = () => {
 
   return (
     <Box w="400px">
-      <form action="submit" onSubmit={handleSubmit}>
+      <form action="submit" onSubmit={handleSubmit} >
         <FormControl>
           <FormLabel fontSize={'20'}>
             Name:
@@ -61,11 +61,14 @@ export const PhoneBook = () => {
             type="submit"
             bgColor="transparent"
             border="1px"
-            borderColor="#000000"
-            fontWeight="700"
-            color="#1498fd"
+            borderColor="#ff6b0a"
+            color="#ff6b0a"
+            borderRadius="10px"
+            textTransform="capitalize"
             fontSize={'20'}
-            _hover={{ bgColor: '#d6d5d4' }}
+            _hover={{ bgColor: '#FF6B0A',  color:"#fff"}} 
+            marginTop= "15px"
+            marginBottom= "50px"
           >
             Add contact
           </Button>

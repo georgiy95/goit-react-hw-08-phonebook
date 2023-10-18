@@ -32,29 +32,31 @@ const Login = () => {
 
   return (
     <>
-      <Box p="2" border="1px" bgColor={'#d6d5d4'}>
-        <Text fontSize="28" fontWeight="700" color="#1498fd">
+      <Box p="2" border="1px" bgColor={'#00f'}>
+        <Text fontSize="28"  color="#fff">
           PhoneBook
         </Text>
       </Box>
       <Box p={'16px'}>
         <form action="submit" onSubmit={login}>
           <FormControl w={'400px'}>
-            <FormLabel fontSize={'20'} fontWeight={'500'}>
+            <FormLabel fontSize={'20'} fontWeight={'500'} color={'#00f'}>
               Email:
               <Input
                 id="1"
                 fontSize={'20'}
                 fontWeight={'500'}
+                borderColor="#ff6b0a"
                 name="email"
                 type="email"
               />
             </FormLabel>
-            <FormLabel fontSize={'20'} fontWeight={'500'}>
+            <FormLabel fontSize={'20'} fontWeight={'500'} color={'#00f'}>
               Password:
               <Input
                 id="2"
                 fontSize={'20'}
+                borderColor="#ff6b0a"
                 fontWeight={'500'}
                 name="password"
                 type="password"
@@ -67,23 +69,23 @@ const Login = () => {
               type="submit"
               bgColor="transparent"
               border="1px"
-              borderColor="#000000"
-              fontWeight="700"
-              color="#1498fd"
+              borderColor="#ff6b0a"
+              color="#ff6b0a"
               fontSize={'20'}
-              _hover={{ bgColor: '#d6d5d4' }}
+              marginTop="20px"
+              _hover={{ bgColor: '#FF6B0A',  color:"#fff"}} 
               textDecoration={'underline'}
             >
               Sign in
             </Button>
             <Button
-              bgColor="transparent"
+              bgColor="#fff"
               border="1px"
-              borderColor="#000000"
-              fontWeight="700"
-              color="#1498fd"
+              borderColor="#ff6b0a"
+              color="#ff6b0a"
+              marginTop="20px"
               fontSize={'20'}
-              _hover={{ bgColor: '#d6d5d4' }}
+              _hover={{ bgColor: '#FF6B0A',  color:"#fff"}} 
             >
               <NavLink to="/register">Sign up</NavLink>
             </Button>
