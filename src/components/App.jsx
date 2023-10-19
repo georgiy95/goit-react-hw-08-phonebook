@@ -1,45 +1,61 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
-import Login from 'pages/Login';
-import Register from 'pages/Register';
-import {useSelector } from 'react-redux';
-import {getUser } from '../redux/selectos';
-import Contacts from 'pages/ContactsList';
-import {ChakraProvider } from '@chakra-ui/react';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './Layout';
+import UserForm from './UserForm/UserForm';
+import Preloader from './Preloader/Preloader';
+import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
+import { useDispatch, useSelector } from 'react-redux';
+import { lazy, useEffect } from 'react';
+import { refreshUser } from 'services/operations';
+import { selectIsRefreshing } from 'redux/contactsSlice';
+import { RestrictedRout } from './RestrictedRout';
+import { PrivateRout } from './PrivateRout';
 
+const ContactsPage = lazy(() => import('pages/ContactsPage/ContactsPage'));
+const LoginPage = lazy(() => import('pages/LoginPage/LoginPage'));
+const RegisterPage = lazy(() => import('pages/RegisterPage/RegisterPage'));
 
 const App = () => {
-const { user } = useSelector(getUser);
-  
+  const dispatch = useDispatch();
+  const isRefreshing = useSelector(selectIsRefreshing);
+
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
 
   return (
-    <ChakraProvider>
-      <div>
+    <>
+      {isRefreshing ? (
+        <Preloader />
+      ) : (
         <Routes>
-          <Route
-            path="/login"
-            element={user?.token ? <Navigate to="/contacts" /> : <Login />}
-          />
-          <Route
-            path="/register"
-            element={user?.token ? <Navigate to="/contacts" /> : <Register />}
-          />
-          <Route
-            path="/contacts"
-            element={!user?.token ? <Navigate to="/login" /> : <Contacts />}
-          />
-          <Route
-            path="*"
-            element={
-              user?.token ? (
-                <Navigate to="/contacts" />
-              ) : (
-                <Navigate to="/login" />
-              )
-            }
-          />
+          <Route path="/" element={<Layout />}>
+            <Route index element={<UserForm />} />
+            <Route
+              path="/login"
+              element={
+                <RestrictedRout component={LoginPage} redirectTo="/contacts" />
+              }
+            />
+            <Route
+              path="/register"
+              element={
+                <RestrictedRout
+                  component={RegisterPage}
+                  redirectTo="/contacts"
+                />
+              }
+            />
+            <Route
+              path="/contacts"
+              element={
+                <PrivateRout component={ContactsPage} redirectTo="/login" />
+              }
+            />
+          </Route>
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
-      </div>
-    </ChakraProvider>
+      )}
+    </>
   );
 };
 

@@ -1,0 +1,22 @@
+.contacts__item {
+  border-bottom: 1px solid lightgray;
+}
+
+.user__number {
+  display: flex;
+}
+
+.iconMoon {
+  margin-right: 1em;
+}
+
+.contacts__btn {
+  margin-left: auto;
+  color: gray;
+  cursor: pointer;
+}
+
+.contacts__btn:hover,
+.contacts__btn:focus {
+  color: black;
+}

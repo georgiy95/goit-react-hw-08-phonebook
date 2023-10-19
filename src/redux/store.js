@@ -1,10 +1,7 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { contactsStateReducer } from './contactsStateSlice';
-import { filterReducer } from './filterSlice';
-import storage from 'redux-persist/lib/storage';
+import { configureStore } from '@reduxjs/toolkit';
 import {
-  persistStore,
   persistReducer,
+  persistStore,
   FLUSH,
   REHYDRATE,
   PAUSE,
@@ -12,24 +9,22 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import { usersReducer } from './userSlice';
+import storage from 'redux-persist/lib/storage';
+import { filterSlice } from './filterSlice';
+import { contactsSlice } from './contactsSlice';
 
+//Persisting token field from contactsSlice to localStorage
 const persistConfig = {
-  key: 'root',
+  key: 'contacts',
   storage,
-  whitelist: 'userToken',
+  whitelist: ['token'],
 };
 
-const rootReduser = combineReducers({
-  contacts: contactsStateReducer,
-  filter: filterReducer,
-  user: usersReducer,
-});
-
-const persistedReducer = persistReducer(persistConfig, rootReduser);
-
 export const store = configureStore({
-  reducer: persistedReducer,
+  reducer: {
+    contacts: persistReducer(persistConfig, contactsSlice.reducer),
+    filter: filterSlice.reducer,
+  },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {

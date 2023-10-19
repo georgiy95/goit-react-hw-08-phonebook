@@ -1,0 +1,23 @@
+.loginMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.loginMenu li {
+  display: inline-block;
+}
+
+.loginMenu a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(230, 230, 230);
+  padding: 12px 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.loginMenu a:hover,
+.loginMenu a:focus,
+.loginMenu .active {
+  color: rgb(255, 255, 255);
+}
