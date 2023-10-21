@@ -18,11 +18,12 @@ export const AddContactForm = () => {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <h3>Name</h3>
-      <input type="text" name="name" />
-      <h3>Number</h3>
-      <input type="tel" name="number" />
-      <button type="submit" className="button">
+    <h2 className="title-form">Phonebook</h2>
+      <span className="title">Name:</span>
+      <input className="input" type="text" name="name" placeholder="name"/>
+      <span className="title">Number:</span>
+      <input className="input" type="tel" name="number" placeholder="number"/>
+      <button className="btn" type="submit">
         Add contact
       </button>
     </form>

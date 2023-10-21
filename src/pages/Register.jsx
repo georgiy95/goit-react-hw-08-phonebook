@@ -21,11 +21,11 @@ const Register = () => {
   }
 
   return (
-    <form className="register-form" onSubmit={handleSubmit}>
-      <input type="text" name="name" placeholder="Name" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <input type="password" name="password" placeholder="Password" required />
-      <button type="submit">Register</button>
+    <form className="form"  onSubmit={handleSubmit}>
+      <span className="title">Name:</span><input className="input"  type="text" name="name" placeholder="name" required />
+      <span className="title">Email:</span><input className="input"  type="email" name="email" placeholder="email" required />
+      <span className="title">Password:</span><input className="input"  type="password" name="password" placeholder="password" required />
+      <button className="btn" type="submit">Register</button>
     </form>
   );
 };

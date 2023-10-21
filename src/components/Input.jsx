@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 export const Input = props => (
-  <input type={props.type} name={props.name} title={props.title} required />
+  <input className="input" type={props.type} name={props.name} title={props.title} required />
 );
 
 Input.propTypes = {

@@ -21,10 +21,10 @@ const Login = () => {
   }
 
   return (
-    <form className="login-form" onSubmit={handleSubmit}>
-      <input type="email" name="email" placeholder="Email" required />
-      <input type="password" name="password" placeholder="Password" required />
-      <button type="submit">Login</button>
+    <form className="form" onSubmit={handleSubmit}>
+      <span className="title">Email:</span><input className="input" type="email" name="email" placeholder="email" required />
+      <span className="title">Password:</span><input className="input" type="password" name="password" placeholder="password" required />
+      <button className="btn" type="submit">Login</button>
     </form>
   );
 };

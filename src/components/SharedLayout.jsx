@@ -20,13 +20,13 @@ const SharedLayout = () => {
         <nav className="nav">
           <div className="pages-nav">
             <Link className="link" to="/">
-              Home
+            PhoneBook
             </Link>
           </div>
           {isLoggedIn ? (
             <div className="login-nav">
               <p className="nav-email">{email}</p>
-              <button className="logout-button button" onClick={handleLogout}>
+              <button className="btn-logout" onClick={handleLogout}>
                 Logout
               </button>
             </div>

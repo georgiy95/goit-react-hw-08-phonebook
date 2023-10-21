@@ -9,7 +9,7 @@ export const Contact = props => {
   };
 
   return (
-    <li>
+    <li className="contactList">
       {props.name}: {props.number}
       <button
         className="delete-button"

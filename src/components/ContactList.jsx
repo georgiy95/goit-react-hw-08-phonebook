@@ -17,7 +17,7 @@ export const ContactList = () => {
   return (
     <div className="container">
       <AddContactForm />
-      <h2>Contacts</h2>
+      <h2 className="title-form">Contacts</h2>
       <Filter />
       <ul>
         {contacts
