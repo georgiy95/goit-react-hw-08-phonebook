@@ -127,7 +127,7 @@ code {
 
 .title-form {
   color: #00f;
-  font-size: 20px;
+  font-size: 36px;
   margin-left: 30px;
   margin-top: 20px;
 }
@@ -142,7 +142,6 @@ code {
   cursor: pointer;
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 15px;
   display: inline-block;
   margin-left: 30px;
 
@@ -199,8 +198,18 @@ code {
 
   .contactList {
     list-style: none;
-    margin-left: -11px;
+    margin-left: -7px;
     align-items: center;
     font-size: 18px;
     display: flex;
   }
+
+
+  .form-border{
+  border: 3px solid #0004ff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 370px;
+  margin-left: 30px;
+}
