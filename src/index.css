@@ -1,4 +1,15 @@
-@import-normalize; /* bring in normalize.css styles */
+@import "modern-normalize/modern-normalize.css";
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
 
 body {
   margin: 0;
@@ -7,6 +18,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: gray;
+  background-image: linear-gradient(to bottom right, #3a1c71, #d76d77, #ffaf7b);
+  background-repeat: no-repeat;
 }
 
 code {
@@ -14,206 +28,9 @@ code {
     monospace;
 }
 
-.pages-nav {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
 
-.login-nav {
-  margin-left: auto;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.nav-email {
-  color: white;
-    font-size: 20px;
-    margin-left: 50px;
-    margin-top: 20px;
-}
-
-.delete-button {
-  margin-left: 30px;
-  margin-bottom: 5px;
-}
-
-.logout-button {
-  margin: 0;
-  height: 20px;
-}
-
-.login-form,
-.register-form {
-  margin-top: 30px;
-  margin-left: 30px;
-  display: flex;
-  gap: 10px;
-}
-
-
-  .page-header {
-    display: flex;
-    align-items: center;
-    height: 50px;
-    width: 100%;
-      margin-bottom: 20px;
-      background-color: #00f;
-      border-bottom: 3px solid #ff6b0a;
-      gap: 20px;
-      list-style: none;
-      margin: 0;
-  }
-
-
-.link {
-  color: #fff;
-  font-size: 30px;
-  text-decoration: none;
-  transition: color .2s;
-  color: white;
-}
-
-.link:hover {
-  color: #ff6b0a;
-}
-
-.nav {
-  display: flex;
-  width: 100%;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.logout-button {
-  margin: 0;
-  height: 20px;
-}
-
-.home-header{
-  padding-left: 20px;
-  color: #ff6b0a;
-  text-align: center
-}
-
-.home-link{
-  color: #ff6b0a;
-}
-
-.home-link:hover{
-  color: #00f;
-}
-
-.input {
-  border-color: #0004ff;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  outline-color: blue;
-  width: 300px;
-  font-size: 18px;
-  display: flex;
-  margin-left: 30px;
-  margin-top: 8px;
-}
-
-.title {
-  color: #00f;
-  font-size: 20px;
-  margin-left: 30px;
-  margin-top: 20px;
-}
-
-.title-form {
-  color: #00f;
-  font-size: 36px;
-  margin-left: 30px;
-  margin-top: 20px;
-}
-
-.btn {
-  text-decoration: none;
-  border: 1px solid #8e8f99;
-  border-radius: 10px;
-  border-color: rgba(255,107,10);
-  background-color: #fff;
-  color: rgba(255,107,10);
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-  display: inline-block;
-  margin-left: 30px;
-
-}
-
-.btn:hover {
-  background-color: rgba(255,107,10);
-  color: #fff;
-  border-color: rgba(255,107,10);
-}
-
-.form {
-  margin-top: 20px;
-}
-
-.btn-logout {
-  text-decoration: none;
-  border: 1px solid #8e8f99;
-  border-radius: 10px;
-  border-color: #fff;
-  background-color: #fff;
-  color: rgba(255,107,10);
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-  display: inline-block;
-  margin-left: 50px;
-
-}
-
-.btn-logout:hover {
-  background-color: rgba(255,107,10);
-  color: #fff;
-  border-color: rgba(255,107,10);
-}
-
-.delete-button {
-	background: #fff;
-	border: 1px solid rgba(5,5,5,.2);
-	border-radius: 5px;
-	color: red;
-	cursor: pointer;
-	font-size: 14px;
-	padding-left: 10px;
-	padding-right: 10px;
-	text-transform: capitalize;
-	transition: background-color var(--trans-hv);
-  }
-  
-  .delete-button:hover {
-	background-color: red;
-	color: #fff;
-  }
-
-  .contactList {
-    list-style: none;
-    margin-left: -7px;
-    align-items: center;
-    font-size: 18px;
-    display: flex;
-  }
-
-
-  .form-border{
-  border: 3px solid #0004ff;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  padding: 10px;
-  width: 370px;
-  margin-left: 30px;
-}
-
-.signup{
-  padding-left: 30px;
-  text-align: center
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
