@@ -28,6 +28,7 @@ export const LoginForm = () => {
         Email:
         <input
           className={css.input}
+          placeholder="email"
           type="email"
           name="email"
           value={form.email}
@@ -39,6 +40,7 @@ export const LoginForm = () => {
         <input
           className={css.input}
           type="password"
+          placeholder="password"
           name="password"
           value={form.password}
           onChange={handleChange}
