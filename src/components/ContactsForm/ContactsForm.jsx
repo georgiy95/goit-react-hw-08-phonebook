@@ -9,12 +9,9 @@ import React, { useState } from 'react';
 
 const ContactsForm = () => {
   const dispatch = useDispatch();
-
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-
   const contacts = useSelector(selectContacts);
-
   const handleChange = evt => {
     const { name, value } = evt.target;
     if (name === 'name') setName(value);
@@ -44,6 +41,7 @@ const ContactsForm = () => {
       onSubmit={handleSubmit}
       onClick={() => dispatch(setFilter(''))}
     >
+      <div className={css.title}>Name:</div>
       <InputLabel
         id={nameId}
         name="name"
@@ -53,6 +51,7 @@ const ContactsForm = () => {
         value={name}
         onChange={handleChange}
       />
+      <div className={css.title}>Namber:</div>
       <InputLabel
         id={numberId}
         name="number"
@@ -62,7 +61,7 @@ const ContactsForm = () => {
         value={number}
         onChange={handleChange}
       />
-      <button className={css.buttonBook} type="submit">
+      <button className={css.btn} type="submit">
         Add contact
       </button>
     </form>

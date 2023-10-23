@@ -1,18 +1,15 @@
 import css from './HomePage.module.css';
-import { Helmet } from 'react-helmet';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function HomePage() {
   return (
     <div className={css.container}>
-      <Helmet>
-        <title>Contacts manager</title>
-      </Helmet>
-      <h1 className={css.title}>
-        CONTACTS MANAGER WELCOME PAGE{' '}
-        <span role="img" aria-label="Greeting icon" className={css.emoji}>
-          📚
-        </span>
-      </h1>
+        <h1 className={css.title}>
+          Welcome, please <Link className={css.homeLink} to="/login">log
+          </Link> in or <Link className={css.homeLink} to="/register">register</Link> 
+          {' '}to use the PhoneBook &#9742;!
+        </h1>
     </div>
   );
 }

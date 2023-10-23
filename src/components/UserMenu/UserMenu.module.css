@@ -4,27 +4,30 @@
     gap: 12px;
 }
 
-.userEmail {
-    font-weight: 500;
+.userName {
     color: white;
+    font-size: 20px;
+    margin-left: 50px;
+    font-size: 30px;
 }
 
 .buttonLogout {
-    display: block;
-    width: 80px;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 0;
-    background-color: #4d1437;
-    color: white;
-    cursor: pointer;
-    margin-right: 16px;
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+  border: 1px solid #8e8f99;
+  border-radius: 10px;
+  border-color: #fff;
+  background-color: #fff;
+  color: rgba(255,107,10);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 50px;
+  padding: 5px;
 }
 
-.buttonLogout:hover,
-.buttonLogout:focus {
-    background-color: #3b0e2a;
-    color: #daa3c5;
+.buttonLogout:hover {
+    background-color: rgba(255,107,10);
+    color: #fff;
+    border-color: rgba(255,107,10);
 }

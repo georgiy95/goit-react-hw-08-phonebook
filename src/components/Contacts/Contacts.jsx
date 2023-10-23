@@ -19,11 +19,13 @@ export const Contacts = () => {
 
   return (
     <div className={css.phonebook}>
+      <h1 className={css.phn}>Phonebook</h1>
       <ContactsForm />
-      <p className={css.find}>Find contact</p>
+      <h2 className={css.phn2}>Contacts</h2>
+      <p className={css.find}>Find contacts by name</p>
       <Filter />
       {isLoading && !isError && (
-        <p style={{ marginTop: '15px', fontSize: '18px', color: 'white' }}>
+        <p style={{ marginTop: '15px', fontSize: '18px', marginLeft: '30px', color: 'blue' }}>
           Request in progress...
         </p>
       )}

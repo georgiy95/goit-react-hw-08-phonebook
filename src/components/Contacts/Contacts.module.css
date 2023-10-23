@@ -1,9 +1,21 @@
-.phonebook {
-    width: 480px;
-    margin-top: 30px;
+.find {
+    color: #00f;
+    font-size: 20px;
+    margin-left: 30px;
+    margin-top: 10px;
+margin-bottom: 0;
 }
 
-.find {
-    font-size: 18px;
-    color: white;
-}
+.phn {
+    color: #00f;
+padding-left: 30px;
+  }
+
+  
+.phn2 {
+    margin-top: 10px;
+    color: #00f;
+padding-left: 30px;
+margin: 0;
+font-size: 30px;
+  }

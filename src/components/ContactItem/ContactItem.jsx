@@ -6,7 +6,6 @@ const ContactItem = ({ id, name, number, onDelete }) => (
     <p className={css.contactName}>
       {name}: {number}
     </p>
-
     <button
       className={css.buttonDelete}
       type="button"

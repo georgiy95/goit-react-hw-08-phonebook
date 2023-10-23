@@ -2,6 +2,8 @@ import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 import css from './LoginForm.module.css';
 import { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -21,8 +23,9 @@ export const LoginForm = () => {
 
   return (
     <form className={css.form} onSubmit={handleSubmit}>
+      <h2 className={css.phn2}>Login</h2>
       <label className={css.label}>
-        Email
+        Email:
         <input
           className={css.input}
           type="email"
@@ -32,7 +35,7 @@ export const LoginForm = () => {
         />
       </label>
       <label className={css.label}>
-        Password
+        Password:
         <input
           className={css.input}
           type="password"
@@ -42,8 +45,13 @@ export const LoginForm = () => {
         />
       </label>
       <button className={css.button} type="submit">
-        Log In
+        Login
       </button>
+      <br />
+      <div className={css.signup}>
+          <Link className="home-link" to="/register">Signup 
+          </Link>&#128072;{' '}if you don't have an account yet.
+        </div>
     </form>
   );
 };

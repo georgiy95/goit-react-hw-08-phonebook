@@ -5,13 +5,14 @@
 }
 
 .title {
-    font-weight: 500;
-    font-size: 48;
-    text-align: center;
-    color: white;
-    margin-top: 300px;
+    color: #ff6b0a;
+    padding-top: 30px;
 }
-
-.emoji {
-    font-size: 100px;
-}
+ 
+.homeLink{
+    color: #ff6b0a;
+  }
+  
+  .homeLink:hover{
+    color: #00f;
+  }

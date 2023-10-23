@@ -13,7 +13,6 @@ const ContactList = () => {
   );
 
   const handleDeleteContact = contactId => {
-    // console.log('Deleting contact with ID:', contactId);
     dispatch(deleteContact(contactId));
   };
 

@@ -4,6 +4,7 @@ import { register } from 'redux/auth/operations';
 import css from './RegisterForm.module.css';
 import { useFormik } from 'formik';
 import { validationSchema } from './validationSchema';
+import { Link } from 'react-router-dom';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -22,10 +23,11 @@ export const RegisterForm = () => {
 
   return (
     <form className={css.form} onSubmit={formik.handleSubmit}>
+       <h2 className={css.phn2}>Register</h2>
       <label className={css.label}>
-        Username
+        Username:
         <input
-          placeholder="Adrian Cross"
+          placeholder="name"
           className={css.input}
           type="text"
           name="name"
@@ -38,9 +40,9 @@ export const RegisterForm = () => {
         ) : null}
       </label>
       <label className={css.label}>
-        Email
+        Email:
         <input
-          placeholder="across@mail.com"
+          placeholder="email"
           className={css.input}
           type="email"
           name="email"
@@ -53,9 +55,10 @@ export const RegisterForm = () => {
         ) : null}
       </label>
       <label className={css.label}>
-        Password
+        Password:
         <input
           title="Minimum 7 characters"
+          placeholder="password"
           className={css.input}
           type="password"
           name="password"
@@ -63,13 +66,22 @@ export const RegisterForm = () => {
           value={formik.values.password}
           onBlur={formik.handleBlur}
         />
-        {formik.touched.password && formik.errors.password ? (
-          <div className={css.formikMessage}>{formik.errors.password}</div>
+           {formik.touched.email && formik.errors.email ? (
+          <div className={css.formikMessage}>{formik.errors.email}</div>
         ) : null}
       </label>
       <button className={css.button} type="submit">
         Register
       </button>
+      <br />
+      <div className={css.signup}>
+      If you have an account then &#128073;
+    <Link to="/login"> login.
+    </Link>
+  </div>
     </form>
   );
 };
+
+
+

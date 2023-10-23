@@ -9,7 +9,7 @@ export const UserMenu = () => {
 
   return (
     <div className={css.wrapper}>
-      <p className={css.userEmail}>Welcome, {user.email}</p>
+      <p className={css.userName}>Welcome, {user.name}</p>
       <button
         className={css.buttonLogout}
         type="button"

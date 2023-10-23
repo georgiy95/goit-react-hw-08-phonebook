@@ -5,7 +5,6 @@ import css from './InputLabel.module.css';
 const InputLabel = ({ name, value, onChange, type, pattern, title, id }) => {
   return (
     <label className={css.labelBook} htmlFor={id}>
-      {name}
       <input
         className={css.inputBook}
         id={id}

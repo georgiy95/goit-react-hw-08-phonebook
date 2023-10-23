@@ -13,7 +13,7 @@ const Filter = () => {
 
   return (
     <input
-      className={css.inputFilter}
+        className={css.inputFilter}
       value={filter}
       onChange={handleFilterChange}
     />
